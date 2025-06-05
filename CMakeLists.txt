@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(HYPERGRID_AI)
+set(CMAKE_CXX_STANDARD 20)
+find_package(Qt6 COMPONENTS Widgets REQUIRED)
+file(GLOB_RECURSE SOURCES src/*.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_include_directories(${PROJECT_NAME} PRIVATE src)
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
